@@ -1,4 +1,5 @@
 
+
 # LinkedInConnectBot
 
 LinkedInConnectBot is a Java command line tool that leverages the power of the Selenium WebDriver Testing Suite to automate connecting to people you know and love.
@@ -24,9 +25,19 @@ Eclipse > File > Open Project from File System > Directory > connect-bot > Selec
 ```
 ## Usage
 Above all the most important thing to do is ensure that the chromedriver.exe file is in the same directory as the .jar file or in the root directory of the Eclipse project.
+**Login:**
+To use the bot you need to provide it with your LinkedIn username and password. This information is never stored.
+```bash
+Welcome to the LinkedInConnectBot!
+What is your LinkedIn email?
+abc@xyz.com
+What is your LinkedIn password?
+password:)
+```
+
 
 **User Input:**
-There are two ways to input your prospective connections profile URLs into the program: an input file or user input. 
+There are three ways to input your prospective connections profile URLs into the program: an input file provided through the command line, an input file specified by the user, or through user input. 
 
 **Input File through Command Line** (Note: input.txt can be named anything)
 ```bash
@@ -45,7 +56,7 @@ input.txt
 You provided filename input.txt
 ```
 
-If you choose to do **User Input** it looks something like this
+**User Input** (Note: Bot will keep going until 'stop' is typed)
 ```bash
 Welcome to the LinkedInConnectBot!
 ...
@@ -64,6 +75,13 @@ There is an option to run **ChromeDriver headless**-ly meaning that a Chrome win
 Welcome to the LinkedInConnectBot!
 Would you like to run in headless mode (no window)? (y/n)
 y
+```
+
+There is an also an option to choose the **Amount of Threads** (up to 5) you can run at the same time, which will improve the speed at which connections are made by allowing connections to be made in parallel instead of one at a time. 
+```bash
+Welcome to the LinkedInConnectBot!
+How many threads would you like to use? (default 1, up to 5)
+5
 ```
 ## Contributing
 
